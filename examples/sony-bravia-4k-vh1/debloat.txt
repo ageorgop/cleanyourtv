@@ -10,6 +10,9 @@
 # enabled; the Wi-Fi in use belonged to android.uid.system. No key helper was needed: Home, gear, Netflix,
 # YouTube, Input, the mic button, held volume and a power cycle all checked on the real remote. Reboot-checked:
 # everything stayed disabled and Home stayed on the launcher. One day of use so far.
+# The US model has an ATSC 3.0 tuner (com.sony.dtv.tvinput.atsc3tuner), which uses Vewd: do not add
+# com.vewd.core.service to this list for US TVs. It stayed enabled on the X900H; on the XR-65X90L (see
+# examples/sony-kd-65x82l), disabling it left ATSC 3.0 channels black until it was re-enabled and the TV rebooted.
 #
 # Apply:   TV_HOST=<tv ip> tools/disable.sh examples/sony-bravia-4k-vh1/debloat.txt
 # Undo:    TV_HOST=<tv ip> tools/restore.sh examples/sony-bravia-4k-vh1/debloat.txt com.google.android.tvlauncher
